@@ -1,5 +1,5 @@
 <template>
-    <div>test Vuejs</div>
+    <div class="dark:bg-gray-900 text-primary">test Vuejs</div>
 </template>
 
 <script>
