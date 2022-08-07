@@ -26,6 +26,8 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        return true;
+        return response()->json([
+            'msg' => 'success to connect'
+        ]);
     }
 }

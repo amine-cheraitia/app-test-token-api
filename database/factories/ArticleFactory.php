@@ -18,7 +18,7 @@ class ArticleFactory extends Factory
     {
         return [
             'designation' => fake()->name(),
-            'qte' => fake()->random_int(0, 50)
+            'qte' => fake()->randomNumber(2, false),
         ];
     }
 }
