@@ -24,6 +24,17 @@ class AuthController extends Controller
         );
     }
 
+    public function logout(Request $request)
+    {
+        $user = User::whereEmail($request->email)->first()->tokens()->delete();
+        /*  $request->user()->tokens()->delete(); */
+
+        /* auth()->user()->tokens()->delete(); */
+        return response()->json([
+            'message' =>  $user
+        ]);
+    }
+
     public function dashboard()
     {
         return response()->json([
